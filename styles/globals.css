@@ -15,12 +15,156 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.center-horizontal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.createPage {
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+/* .createPage div:first-child {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+
+.form {
+  width: 55%;
+  padding: 10px 50px;
+}
+
+.contact .contactInfo {
+  /* width: 40%; */
+  align-self: center;
+  color: #ffff;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #C8CCD1;
+  caret-color: black;
+  color: black;
+}
+
+input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  /* background-color: #73A9DF; */
+  caret-color: black;
+  color: black;
+}
+
+input:focus {
+  border: none;
+  outline: none;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: none;
+  background-color: #C8CCD1;
+  resize: none;
+  outline: none;
+  caret-color: black;
+  color: black;
+  font-size: 1.1rem;
+}
+
+textarea:focus {
+  border: none;
+  outline: none;
+}
+
+.formControl {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formControl div {
+  width: 45%;
+}
+
+.contact label {
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.contact label span {
+  color: red;
+}
+
+.contactImage {
+  align-self: center;
+}
+
+.form h2 {
+  color: #ffff;
+  font-size: 2.8rem;
+  margin: 0;
+  margin-left: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form>p {
+  color: #FB7125;
+  margin-top: 0;
+}
+
+.fileWrapper {
+  display: flex;
+  width: 70%;
+}
+
+.secondSection {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+
+  .formControl {
+    flex-direction: column;
   }
-  body {
-    color: white;
-    background: black;
+
+  .formControl div {
+    width: 100%;
   }
+
+  .form {
+    width: 100%;
+    padding: 0;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  textarea {
+    height: 100px;
+  }
+
 }
