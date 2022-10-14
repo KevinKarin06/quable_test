@@ -9,6 +9,12 @@ export default function Table(props) {
 
     const router = useRouter()
 
+    function stripHtml(html) {
+        let tmp = document.createElement("DIV");
+        tmp.innerHTML = html;
+        return tmp.textContent || tmp.innerText || "";
+    }
+
     const columns = [
         { field: 'id', headerName: 'ID', width: 200 },
         { field: 'title', headerName: 'Title', width: 300 },
@@ -50,8 +56,8 @@ export default function Table(props) {
         return {
             id: el.id,
             title: el.title,
-            type: el.product_type ?? "Test",
-            body: el.body_html,
+            type: el.product_type || '-',
+            body: stripHtml(el.body_html),
             image: (el.image) ? el.image.src : img,
             delete: el.id
         }
