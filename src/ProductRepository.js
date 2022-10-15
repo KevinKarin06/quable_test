@@ -4,7 +4,6 @@ const client = axios.create({
     baseURL: process.env.BASE_URL,
     headers: {
         'X-Shopify-Access-Token': process.env.ACCESS_TOKEN,
-        'Access-Control-Allow-Origin': 'http://localhost:3000'
     }
 });
 
